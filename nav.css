@@ -121,28 +121,48 @@
 
   .nav-links {
     position: fixed;
-    top: 0;
+    top: 70px;
     left: 0;
-    right: 0;
-    bottom: 0;
+    width: 100%;
+    height: calc(100vh - 70px);
+    display: flex;
     flex-direction: column;
-    justify-content: center;
-    gap: var(--space-8);
-    background: var(--color-bg);
+    align-items: center;
+    justify-content: flex-start;
+    padding: var(--space-8) var(--space-6);
+    gap: var(--space-12);
+    background-color: var(--color-bg);
+    background-image: none;
     opacity: 0;
+    visibility: hidden;
     pointer-events: none;
-    transition: opacity 250ms var(--ease-out);
+    transition: opacity 250ms var(--ease-out), visibility 250ms var(--ease-out);
     z-index: 99;
   }
 
   .nav-links.open {
     opacity: 1;
+    visibility: visible;
     pointer-events: all;
   }
 
   .nav-links a {
+    display: block;
     font-size: var(--text-lg);
-    letter-spacing: 0.04em;
+    font-weight: 500;
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+  }
+
+  .nav-links a:hover {
+    color: var(--color-accent);
+  }
+
+  .nav-links a[aria-current="page"] {
+    color: var(--color-accent);
+    font-weight: 700;
   }
 }
 
