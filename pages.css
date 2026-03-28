@@ -125,127 +125,61 @@
 }
 
 /* ========================================
-   Writing Page Styles
+   Start Here (Writing Page)
    ======================================== */
 
-.writing-page {
-  max-width: 720px;
-  margin: 3rem auto 4rem;
-  padding: 0 1.25rem;
-}
-
-.writing-page h1 {
-  margin-bottom: 0.75rem;
-}
-
-.writing-intro {
-  max-width: 640px;
-  line-height: 1.6;
-  margin-bottom: 2.5rem;
-}
-
-.writing-section-title {
-  font-size: 1.1rem;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  margin-top: 2.5rem;
-  margin-bottom: 0.75rem;
-}
-
-.post {
-  max-width: 640px;
-  margin-bottom: 2rem;
-}
-
-.post-meta {
-  font-size: 0.85rem;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  color: #777;
-  margin-bottom: 0.25rem;
-}
-
-.post-dot {
-  margin: 0 0.4rem;
-}
-
-.post-title {
-  font-size: 1.2rem;
-  margin: 0 0 0.4rem;
-}
-
-.post-title a {
-  text-decoration: none;
-  color: inherit;
-}
-
-.post-title a:hover {
-  text-decoration: underline;
-}
-
-.post-excerpt {
-  margin: 0;
-  line-height: 1.6;
-  color: #444;
-}
-
 .start-here {
-  max-width: 640px;
-  padding: 1.25rem 1.5rem;
-  border-radius: 6px;
-  border: 1px solid #eee;
-  background: #fafafa;
-  margin-bottom: 2.5rem;
+  padding: var(--space-6);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  margin-bottom: var(--space-10);
 }
 
-.start-here p {
-  margin: 0 0 0.75rem;
+.start-here-title {
+  font-family: var(--font-body);
+  font-size: var(--text-xs);
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--color-accent);
+  margin-bottom: var(--space-3);
 }
 
-.start-here ol {
+.start-here-desc {
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+  margin-bottom: var(--space-4);
+}
+
+.start-here-list {
   margin: 0;
-  padding-left: 1.25rem;
-}
-
-.email-signup {
-  max-width: 640px;
-  margin-top: 3rem;
-  padding-top: 2rem;
-  border-top: 1px solid #eee;
-}
-
-.email-signup form {
+  padding-left: var(--space-6);
   display: flex;
-  gap: 0.75rem;
-  margin: 1rem 0 0.5rem;
+  flex-direction: column;
+  gap: var(--space-3);
 }
 
-.email-signup input[type="email"] {
-  flex: 1;
-  padding: 0.5rem 0.75rem;
-  border-radius: 4px;
-  border: 1px solid #ccc;
-  font-size: 0.95rem;
+.start-here-list li {
+  font-size: var(--text-sm);
+  color: var(--color-text);
+  line-height: 1.6;
 }
 
-.email-signup button {
-  padding: 0.5rem 1rem;
-  border-radius: 4px;
-  border: none;
-  background: #111;
+.start-here-list a {
   color: #fff;
-  font-size: 0.95rem;
-  cursor: pointer;
+  font-weight: 500;
+  text-decoration: none;
+  border-bottom: 1px solid oklch(from var(--color-accent) l c h / 0.3);
+  transition: border-color 200ms var(--ease-out);
 }
 
-.email-signup button:hover {
-  background: #333;
+.start-here-list a:hover {
+  border-color: var(--color-accent);
 }
 
-.email-note {
-  font-size: 0.8rem;
-  color: #777;
-  margin: 0.25rem 0 0;
+.start-here-note {
+  color: var(--color-text-muted);
 }
 
 /* ========================================
