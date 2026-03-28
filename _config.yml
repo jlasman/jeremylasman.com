@@ -1,0 +1,30 @@
+title: Jeremy Lasman
+url: https://jeremylasman.com
+description: "Founder, Builder, Director"
+baseurl: ""
+
+permalink: /writing/:slug/
+
+markdown: kramdown
+kramdown:
+  input: GFM
+  hard_wrap: false
+
+
+exclude:
+  - README.md
+  - LICENSE
+  - Gemfile
+  - Gemfile.lock
+  - .gitignore
+
+defaults:
+  - scope:
+      path: "_posts"
+    values:
+      layout: post
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: page

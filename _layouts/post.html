@@ -1,0 +1,27 @@
+---
+layout: default
+---
+{% assign category_display = "" %}
+{% if page.category == "the-arena" %}{% assign category_display = "The Arena" %}
+{% elsif page.category == "the-match" %}{% assign category_display = "The Match" %}
+{% elsif page.category == "testing-and-execution" %}{% assign category_display = "Testing & Execution" %}
+{% else %}{% assign category_display = page.category %}{% endif %}
+
+<header class="page-header">
+  <div class="container-narrow">
+    <a href="{{ '/writing/' | relative_url }}" class="article-back">← Back to Writing</a>
+    <div class="article-meta">
+      <span class="article-date">{{ page.date | date: "%B %-d, %Y" }}</span>
+      <span class="article-tag">{{ category_display }}</span>
+    </div>
+    <h1 class="page-title">{{ page.title }}</h1>
+  </div>
+</header>
+
+<main class="page-body">
+  <div class="article-body">
+    {{ content }}
+  </div>
+</main>
+
+{% include email-capture.html %}

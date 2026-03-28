@@ -1,0 +1,15 @@
+{% assign p = include.post %}
+{% assign cat_display = "" %}
+{% if p.category == "the-arena" %}{% assign cat_display = "THE ARENA" %}
+{% elsif p.category == "the-match" %}{% assign cat_display = "THE MATCH" %}
+{% elsif p.category == "testing-and-execution" %}{% assign cat_display = "TESTING & EXECUTION" %}
+{% else %}{% assign cat_display = p.category | upcase %}{% endif %}
+
+<a href="{{ p.url | relative_url }}" class="article-card">
+  <div class="article-meta">
+    <span class="article-date">{{ p.date | date: "%B %-d, %Y" }}</span>
+    <span class="article-tag">{{ cat_display }}</span>
+  </div>
+  <h3 class="article-title">{{ p.title }}</h3>
+  <p class="article-excerpt">{{ p.excerpt_text | default: p.excerpt | strip_html | truncatewords: 50 }}</p>
+</a>

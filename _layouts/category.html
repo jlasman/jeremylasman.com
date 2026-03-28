@@ -1,0 +1,44 @@
+---
+layout: default
+---
+{% assign category_display = "" %}
+{% if page.category_slug == "the-arena" %}{% assign category_display = "The Arena" %}
+{% elsif page.category_slug == "the-match" %}{% assign category_display = "The Match" %}
+{% elsif page.category_slug == "testing-and-execution" %}{% assign category_display = "Testing & Execution" %}
+{% else %}{% assign category_display = page.title %}{% endif %}
+
+<header class="page-header">
+  <div class="container-narrow">
+    <a href="{{ '/writing/' | relative_url }}" class="article-back">← Back to Writing</a>
+    <div class="article-meta">
+      <span class="article-date">March 2026</span>
+      <span class="article-tag">{{ category_display }}</span>
+    </div>
+    <h1 class="page-title">{{ page.title }}</h1>
+  </div>
+</header>
+
+<main class="page-body">
+  <div class="article-body">
+    {{ content }}
+
+    {% assign cat_posts = site.posts | where: "category", page.category_slug %}
+    {% if cat_posts.size > 0 %}
+    <hr style="border: none; border-top: 1px solid var(--color-border); margin: var(--space-10) 0;">
+
+    <h2>Posts from {{ category_display }}</h2>
+    {% endif %}
+  </div>
+
+  {% if cat_posts.size > 0 %}
+  <div class="container-narrow">
+    <div class="article-list">
+      {% for post in cat_posts %}
+      {% include post-card.html post=post %}
+      {% endfor %}
+    </div>
+  </div>
+  {% endif %}
+</main>
+
+{% include email-capture.html %}

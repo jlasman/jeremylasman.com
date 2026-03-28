@@ -1,0 +1,18 @@
+{% assign cap_heading = include.heading | default: "Get new tests from inside The Arena." %}
+{% assign cap_desc = include.description | default: "When something new shows up in the Arena and holds up under pressure, I write about it here first." %}
+{% assign cap_btn = include.button | default: "Send me the tests" %}
+{% assign cap_note = include.note | default: "A few focused emails a month from active matches, only when something real is being tested." %}
+
+<section class="email-capture" id="subscribe">
+  <div class="container-narrow">
+    <div class="capture-box">
+      <h2 class="capture-heading">{{ cap_heading }}</h2>
+      <p class="capture-desc">{{ cap_desc }}</p>
+      <form class="capture-form" id="subscribe-form">
+        <input type="email" name="email" placeholder="Email address" required aria-label="Email address" class="capture-input">
+        <button type="submit" class="capture-btn">{{ cap_btn }}</button>
+      </form>
+      <p class="capture-note" id="capture-note">{{ cap_note }}</p>
+    </div>
+  </div>
+</section>

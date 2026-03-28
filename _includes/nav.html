@@ -1,0 +1,14 @@
+<nav class="site-nav" aria-label="Main navigation">
+  <a href="{{ '/' | relative_url }}" class="nav-logo">JL</a>
+  <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+  <div class="nav-links">
+    <a href="{{ '/' | relative_url }}" {% if page.url == '/' %}aria-current="page"{% endif %}>Home</a>
+    <a href="{{ '/now/' | relative_url }}" {% if page.url == '/now/' %}aria-current="page"{% endif %}>Now</a>
+    <a href="{{ '/writing/' | relative_url }}" {% if page.url contains '/writing/' %}aria-current="page"{% endif %}>Writing</a>
+    <a href="{{ '/press/' | relative_url }}" {% if page.url == '/press/' %}aria-current="page"{% endif %}>Press</a>
+    <a href="{{ '/speaking/' | relative_url }}" {% if page.url == '/speaking/' %}aria-current="page"{% endif %}>Speaking</a>
+    <a href="{{ '/work-with-me/' | relative_url }}" {% if page.url == '/work-with-me/' %}aria-current="page"{% endif %}>Work With Me</a>
+  </div>
+</nav>

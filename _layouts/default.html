@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<!--
+   ______                            __
+  / ____/___  ____ ___  ____  __  __/ /____  _____
+ / /   / __ \/ __ `__ \/ __ \/ / / / __/ _ \/ ___/
+/ /___/ /_/ / / / / / / /_/ / /_/ / /_/  __/ /
+\____/\____/_/ /_/ /_/ .___/\__,_/\__/\___/_/
+                    /_/
+        Created with Perplexity Computer
+        https://www.perplexity.ai/computer
+-->
+<meta name="generator" content="Perplexity Computer">
+<meta name="author" content="Perplexity Computer">
+<meta property="og:see_also" content="https://www.perplexity.ai/computer">
+<link rel="author" href="https://www.perplexity.ai/computer">
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>{% if page.seo_title %}{{ page.seo_title }}{% elsif page.title %}{{ page.title }} — {{ site.title }}{% else %}{{ site.title }} — {{ site.description }}{% endif %}</title>
+<meta name="description" content="{{ page.description | default: site.description }}">
+<link rel="canonical" href="{{ page.url | absolute_url }}">
+
+<meta property="og:title" content="{{ page.og_title | default: page.title | append: ' — ' | append: site.title }}">
+<meta property="og:description" content="{{ page.og_description | default: page.description | default: site.description }}">
+<meta property="og:type" content="{{ page.og_type | default: 'website' }}">
+<meta property="og:url" content="{{ page.url | absolute_url }}">
+<meta property="og:site_name" content="{{ site.title }}">
+{% if page.og_image %}<meta property="og:image" content="{{ page.og_image | absolute_url }}">{% endif %}
+
+<meta name="twitter:card" content="{{ page.twitter_card | default: 'summary' }}">
+<meta name="twitter:site" content="@lasmanfactory">
+{% if page.title %}<meta name="twitter:title" content="{{ page.title }}">{% endif %}
+
+{% if page.structured_data %}{{ page.structured_data }}{% endif %}
+
+<link href="https://api.fontshare.com/v2/css?f[]=cabinet-grotesk@500,700,800&f[]=satoshi@400,500&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-YMVRYWGY8H"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-YMVRYWGY8H');
+</script>
+</head>
+<body>
+
+{% include nav.html %}
+
+{{ content }}
+
+{% include footer.html %}
+
+<script src="{{ '/assets/js/nav.js' | relative_url }}"></script>
+{% if page.include_subscribe_js %}<script src="{{ '/assets/js/subscribe.js' | relative_url }}"></script>{% endif %}
+{% if page.include_apply_js %}<script src="{{ '/assets/js/apply.js' | relative_url }}"></script>{% endif %}
+
+</body>
+</html>

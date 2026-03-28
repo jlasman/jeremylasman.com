@@ -1,187 +1,67 @@
-<!DOCTYPE html>
-<html lang="en" data-theme="dark">
-<head>
-<!--
-   ______                            __
-  / ____/___  ____ ___  ____  __  __/ /____  _____
- / /   / __ \/ __ `__ \/ __ \/ / / / __/ _ \/ ___/
-/ /___/ /_/ / / / / / / /_/ / /_/ / /_/  __/ /
-\____/\____/_/ /_/ /_/ .___/\__,_/\__/\___/_/
-                    /_/
-        Created with Perplexity Computer
-        https://www.perplexity.ai/computer
--->
-<meta name="generator" content="Perplexity Computer">
-<meta name="author" content="Perplexity Computer">
-<meta property="og:see_also" content="https://www.perplexity.ai/computer">
-<link rel="author" href="https://www.perplexity.ai/computer">
+---
+layout: default
+title: "Writing"
+description: "Live testing how potential behaves when it hits real constraints. Essays from inside The Arena. By Jeremy Lasman."
+permalink: /writing/
+include_subscribe_js: true
+---
 
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Writing — Jeremy Lasman</title>
-<meta name="description" content="Live testing how potential behaves when it hits real constraints. Essays from inside The Arena. By Jeremy Lasman.">
-<link rel="canonical" href="https://jeremylasman.com/writing/">
+<header class="page-header">
+  <div class="container-narrow">
+    <h1 class="page-title">Writing</h1>
+    <p class="wrt-intro-lead">Live testing how potential behaves when it hits real constraints.</p>
+  </div>
+</header>
 
-<meta property="og:title" content="Writing — Jeremy Lasman">
-<meta property="og:description" content="Live testing how potential behaves when it hits real constraints. Essays from inside The Arena.">
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://jeremylasman.com/writing/">
-<meta property="og:site_name" content="Jeremy Lasman">
+<main class="page-body">
+  <div class="container-narrow">
 
-<meta name="twitter:card" content="summary">
-<meta name="twitter:site" content="@lasmanfactory">
-<meta name="twitter:title" content="Writing — Jeremy Lasman">
+    <!-- ====== Start here ====== -->
+    <section class="wrt-start">
+      <h2 class="wrt-start-heading">Start here</h2>
+      <p class="wrt-start-sub">If you're new to this work, read this first.</p>
+      {% assign start_post = site.posts | where: "start_here", true | first %}
+      {% if start_post %}
+      <a href="{{ start_post.url | relative_url }}" class="wrt-start-card">
+        <h3 class="wrt-start-title">{{ start_post.title }}</h3>
+        <p class="wrt-start-excerpt">{{ start_post.excerpt_text }}</p>
+      </a>
+      {% endif %}
+    </section>
 
-<link href="https://api.fontshare.com/v2/css?f[]=cabinet-grotesk@500,700,800&f[]=satoshi@400,500&display=swap" rel="stylesheet">
-
-<link rel="stylesheet" href="../base.css">
-<link rel="stylesheet" href="../style.css">
-<link rel="stylesheet" href="../nav.css">
-<link rel="stylesheet" href="../pages.css">
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-YMVRYWGY8H"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-YMVRYWGY8H');
-</script>
-</head>
-<body>
-
-  <nav class="site-nav" aria-label="Main navigation">
-    <a href="../index.html" class="nav-logo">JL</a>
-    <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
-      <span></span><span></span><span></span>
-    </button>
-    <div class="nav-links">
-      <a href="../index.html">Home</a>
-      <a href="../now/index.html">Now</a>
-      <a href="../writing/index.html" aria-current="page">Writing</a>
-      <a href="../press/index.html">Press</a>
-      <a href="../speaking/index.html">Speaking</a>
-      <a href="../work-with-me/index.html">Work With Me</a>
-    </div>
-  </nav>
-
-  <!-- ====== Intro ====== -->
-  <header class="page-header">
-    <div class="container-narrow">
-      <h1 class="page-title">Writing</h1>
-      <p class="wrt-intro-lead">Live testing how potential behaves when it hits real constraints.</p>
-    </div>
-  </header>
-
-  <main class="page-body">
-    <div class="container-narrow">
-
-      <!-- ====== Start here ====== -->
-      <section class="wrt-start">
-        <h2 class="wrt-start-heading">Start here</h2>
-        <p class="wrt-start-sub">If you're new to this work, read this first.</p>
-        <a href="../writing/what-i-see/index.html" class="wrt-start-card">
-          <h3 class="wrt-start-title">What I See</h3>
-          <p class="wrt-start-excerpt">I see potential that people can't see yet. Then I build the conditions where they can see it for themselves.</p>
+    <!-- ====== The Framework ====== -->
+    <section class="wrt-framework">
+      <h2 class="wrt-framework-heading">The Framework</h2>
+      <div class="wrt-framework-grid">
+        <a href="{{ '/writing/the-arena/' | relative_url }}" class="wrt-framework-card">
+          <h3 class="wrt-framework-name">The Arena</h3>
+          <p class="wrt-framework-desc">Where we test how potential behaves in real time.</p>
         </a>
-      </section>
-
-      <!-- ====== The Framework ====== -->
-      <section class="wrt-framework">
-        <h2 class="wrt-framework-heading">The Framework</h2>
-        <div class="wrt-framework-grid">
-          <a href="../writing/the-arena/index.html" class="wrt-framework-card">
-            <h3 class="wrt-framework-name">The Arena</h3>
-            <p class="wrt-framework-desc">Where we test how potential behaves in real time.</p>
-          </a>
-          <a href="../writing/the-match-you-dont-know-youre-in/index.html" class="wrt-framework-card">
-            <h3 class="wrt-framework-name">The Match</h3>
-            <p class="wrt-framework-desc">What actually happens when you go head-to-head with your current operating system.</p>
-          </a>
-          <a href="../writing/testing-and-execution/index.html" class="wrt-framework-card">
-            <h3 class="wrt-framework-name">Testing &amp; Execution</h3>
-            <p class="wrt-framework-desc">Where experiments harden into systems you can run in your life and work.</p>
-          </a>
-        </div>
-      </section>
-
-      <hr class="wrt-divider">
-
-      <!-- ====== From the Arena ====== -->
-      <section class="wrt-feed">
-        <h2 class="wrt-feed-heading">From the Arena <span class="wrt-feed-aside">(latest tests)</span></h2>
-
-        <div class="article-list">
-
-          <a href="../writing/what-actually-happens-in-the-match/index.html" class="article-card">
-            <div class="article-meta">
-              <span class="article-date">March 28, 2026</span>
-              <span class="article-tag">THE MATCH</span>
-            </div>
-            <h3 class="article-title">What Actually Happens in The Match</h3>
-            <p class="article-excerpt">
-              The Match is not about changing behavior. It's about mapping the energetic engine that creates your reactions, so you can hold the pattern as a 3D model and choose differently from inside it.
-            </p>
-          </a>
-
-          <a href="../writing/the-match-you-dont-know-youre-in/index.html" class="article-card">
-            <div class="article-meta">
-              <span class="article-date">March 2026</span>
-              <span class="article-tag">THE MATCH</span>
-            </div>
-            <h3 class="article-title">The Match You Don't Know You're In</h3>
-            <p class="article-excerpt">
-              There's a match happening inside you right now — between the version of you running a survival operating system and the version that knows it's time to create. Most people never realize it's happening. They just feel stuck.
-            </p>
-          </a>
-
-          <a href="../writing/the-operating-system-behind-the-rocket/index.html" class="article-card">
-            <div class="article-meta">
-              <span class="article-date">March 2026</span>
-              <span class="article-tag">THE ARENA</span>
-            </div>
-            <h3 class="article-title">The Operating System Behind the Rocket</h3>
-            <p class="article-excerpt">
-              Seven years at SpaceX taught me that the technology powering the rocket matters less than the operating system powering the people building it. That's when I understood what I was actually obsessed with. Not rockets. Not technology. Potential.
-            </p>
-          </a>
-
-        </div>
-      </section>
-
-    </div>
-  </main>
-
-  <!-- ====== Email capture ====== -->
-  <section class="email-capture">
-    <div class="container-narrow">
-      <div class="capture-box">
-        <h2 class="capture-heading">Get new tests from inside The Arena.</h2>
-        <p class="capture-desc">When something new shows up in the Arena and holds up under pressure, I write about it here first.</p>
-        <form class="capture-form" id="subscribe-form">
-          <input type="email" name="email" placeholder="Email address" required class="capture-input">
-          <button type="submit" class="capture-btn">Send me the tests</button>
-        </form>
-        <p class="capture-note">A few focused emails a month from active matches, only when something real is being tested.</p>
+        <a href="{{ '/writing/the-match/' | relative_url }}" class="wrt-framework-card">
+          <h3 class="wrt-framework-name">The Match</h3>
+          <p class="wrt-framework-desc">What actually happens when you go head-to-head with your current operating system.</p>
+        </a>
+        <a href="{{ '/writing/testing-and-execution/' | relative_url }}" class="wrt-framework-card">
+          <h3 class="wrt-framework-name">Testing &amp; Execution</h3>
+          <p class="wrt-framework-desc">Where experiments harden into systems you can run in your life and work.</p>
+        </a>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <footer>
-    <div class="footer-inner">
-      <div class="footer-links">
-        <a href="../now/index.html">Now</a>
-        <a href="../writing/index.html">Writing</a>
-        <a href="../press/index.html">Press</a>
-        <a href="../speaking/index.html">Speaking</a>
-        <a href="../work-with-me/index.html">Work With Me</a>
-        <a href="../links/index.html">Links</a>
+    <hr class="wrt-divider">
+
+    <!-- ====== From the Arena ====== -->
+    <section class="wrt-feed">
+      <h2 class="wrt-feed-heading">From the Arena <span class="wrt-feed-aside">(latest tests)</span></h2>
+
+      <div class="article-list">
+        {% for post in site.posts limit:5 %}
+        {% include post-card.html post=post %}
+        {% endfor %}
       </div>
-      <a href="https://www.perplexity.ai/computer" target="_blank" rel="noopener noreferrer" class="footer-attr">Created with Perplexity Computer</a>
-    </div>
-  </footer>
+    </section>
 
-  <script src="../nav.js"></script>
-  <script src="../subscribe.js"></script>
+  </div>
+</main>
 
-</body>
-</html>
+{% include email-capture.html %}
