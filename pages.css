@@ -124,15 +124,128 @@
   text-decoration: none;
 }
 
-.footer-attr:hover {
-  color: var(--color-text-muted);
+/* ========================================
+   Writing Page Styles
+   ======================================== */
+
+.writing-page {
+  max-width: 720px;
+  margin: 3rem auto 4rem;
+  padding: 0 1.25rem;
 }
 
-/* Updated footer — remove old footer styles that conflict */
-footer {
-  padding: 0;
-  text-align: center;
-  border-top: 1px solid var(--color-border);
+.writing-page h1 {
+  margin-bottom: 0.75rem;
+}
+
+.writing-intro {
+  max-width: 640px;
+  line-height: 1.6;
+  margin-bottom: 2.5rem;
+}
+
+.writing-section-title {
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-top: 2.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.post {
+  max-width: 640px;
+  margin-bottom: 2rem;
+}
+
+.post-meta {
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #777;
+  margin-bottom: 0.25rem;
+}
+
+.post-dot {
+  margin: 0 0.4rem;
+}
+
+.post-title {
+  font-size: 1.2rem;
+  margin: 0 0 0.4rem;
+}
+
+.post-title a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.post-title a:hover {
+  text-decoration: underline;
+}
+
+.post-excerpt {
+  margin: 0;
+  line-height: 1.6;
+  color: #444;
+}
+
+.start-here {
+  max-width: 640px;
+  padding: 1.25rem 1.5rem;
+  border-radius: 6px;
+  border: 1px solid #eee;
+  background: #fafafa;
+  margin-bottom: 2.5rem;
+}
+
+.start-here p {
+  margin: 0 0 0.75rem;
+}
+
+.start-here ol {
+  margin: 0;
+  padding-left: 1.25rem;
+}
+
+.email-signup {
+  max-width: 640px;
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 1px solid #eee;
+}
+
+.email-signup form {
+  display: flex;
+  gap: 0.75rem;
+  margin: 1rem 0 0.5rem;
+}
+
+.email-signup input[type="email"] {
+  flex: 1;
+  padding: 0.5rem 0.75rem;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  font-size: 0.95rem;
+}
+
+.email-signup button {
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  border: none;
+  background: #111;
+  color: #fff;
+  font-size: 0.95rem;
+  cursor: pointer;
+}
+
+.email-signup button:hover {
+  background: #333;
+}
+
+.email-note {
+  font-size: 0.8rem;
+  color: #777;
+  margin: 0.25rem 0 0;
 }
 
 /* ========================================
