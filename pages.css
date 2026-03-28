@@ -220,6 +220,15 @@
   margin-bottom: var(--space-6);
 }
 
+.writing-arena-def {
+  font-family: var(--font-display);
+  font-size: var(--text-base);
+  font-weight: 500;
+  color: #fff;
+  line-height: 1.6;
+  margin-bottom: var(--space-4);
+}
+
 .writing-cta-link {
   color: var(--color-accent);
   text-decoration: none;
@@ -229,6 +238,19 @@
 
 .writing-cta-link:hover {
   border-color: var(--color-accent);
+}
+
+.writing-divider {
+  border: none;
+  border-top: 1px solid var(--color-border);
+  margin: var(--space-2) 0 var(--space-10);
+}
+
+.writing-section-sub {
+  font-size: var(--text-sm);
+  color: var(--color-text-faint);
+  margin-top: calc(-1 * var(--space-4));
+  margin-bottom: var(--space-6);
 }
 
 /* ========================================
