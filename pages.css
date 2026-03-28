@@ -125,77 +125,66 @@
 }
 
 /* ========================================
-   Writing Page — Primer + Section Labels
+   Writing Page
    ======================================== */
 
-.writing-primer {
-  padding: var(--space-6);
-  background: var(--color-surface);
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-lg);
-  margin-bottom: var(--space-12);
+/* -- Intro -- */
+.wrt-intro-lead {
+  font-family: var(--font-display);
+  font-size: var(--text-base);
+  font-weight: 500;
+  color: #fff;
+  line-height: 1.6;
+  margin-bottom: var(--space-3);
 }
 
-.writing-primer-label {
-  display: block;
+.wrt-intro-body {
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+  line-height: 1.7;
+}
+
+/* -- Start here -- */
+.wrt-start {
+  margin-bottom: var(--space-10);
+}
+
+.wrt-start-heading {
   font-family: var(--font-body);
   font-size: var(--text-xs);
   font-weight: 500;
   text-transform: uppercase;
   letter-spacing: 0.12em;
-  color: var(--color-accent);
-  margin-bottom: var(--space-3);
+  color: var(--color-text-muted);
+  margin-bottom: var(--space-2);
 }
 
-.writing-primer-desc {
+.wrt-start-sub {
   font-size: var(--text-sm);
-  color: var(--color-text-muted);
+  color: var(--color-text-faint);
   margin-bottom: var(--space-4);
 }
 
-.writing-primer-list {
-  margin: 0;
-  padding-left: var(--space-6);
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-3);
-}
-
-.writing-primer-list li {
-  font-size: var(--text-sm);
-  color: var(--color-text);
-  line-height: 1.6;
-}
-
-.writing-primer-list a {
-  color: #fff;
-  font-weight: 500;
-  text-decoration: none;
-  border-bottom: 1px solid oklch(from var(--color-accent) l c h / 0.3);
-  transition: border-color 200ms var(--ease-out);
-}
-
-.writing-primer-list a:hover {
-  border-color: var(--color-accent);
-}
-
-.writing-primer-note {
-  color: var(--color-text-muted);
-}
-
-.writing-primer-link {
+.wrt-start-card {
   display: block;
+  padding: var(--space-6);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
   text-decoration: none;
   color: inherit;
-  margin-top: var(--space-2);
-  transition: opacity 200ms var(--ease-out);
+  transition: background 200ms var(--ease-out),
+              border-color 200ms var(--ease-out),
+              transform 200ms var(--ease-out);
 }
 
-.writing-primer-link:hover {
-  opacity: 0.85;
+.wrt-start-card:hover {
+  background: var(--color-surface-2);
+  border-color: #333;
+  transform: translateY(-1px);
 }
 
-.writing-primer-title {
+.wrt-start-title {
   font-family: var(--font-display);
   font-size: var(--text-lg);
   font-weight: 700;
@@ -204,13 +193,77 @@
   margin-bottom: var(--space-2);
 }
 
-.writing-primer-excerpt {
+.wrt-start-excerpt {
   font-size: var(--text-sm);
   color: var(--color-text-muted);
   line-height: 1.65;
 }
 
-.writing-section-label {
+/* -- System framing (3-col) -- */
+.wrt-system {
+  margin-bottom: var(--space-10);
+}
+
+.wrt-system-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-4);
+}
+
+@media (max-width: 640px) {
+  .wrt-system-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.wrt-system-card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  padding: var(--space-6);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  text-decoration: none;
+  color: inherit;
+  transition: background 200ms var(--ease-out),
+              border-color 200ms var(--ease-out),
+              transform 200ms var(--ease-out);
+}
+
+.wrt-system-card:hover {
+  background: var(--color-surface-2);
+  border-color: #333;
+  transform: translateY(-2px);
+}
+
+.wrt-system-name {
+  font-family: var(--font-display);
+  font-size: var(--text-sm);
+  font-weight: 700;
+  color: var(--color-accent);
+  letter-spacing: -0.01em;
+}
+
+.wrt-system-desc {
+  font-size: var(--text-xs);
+  color: var(--color-text-muted);
+  line-height: 1.55;
+}
+
+/* -- Divider -- */
+.wrt-divider {
+  border: none;
+  border-top: 1px solid var(--color-border);
+  margin: 0 0 var(--space-10);
+}
+
+/* -- Arena feed -- */
+.wrt-feed {
+  margin-bottom: var(--space-4);
+}
+
+.wrt-feed-heading {
   font-family: var(--font-body);
   font-size: var(--text-xs);
   font-weight: 500;
@@ -220,37 +273,11 @@
   margin-bottom: var(--space-6);
 }
 
-.writing-arena-def {
-  font-family: var(--font-display);
-  font-size: var(--text-base);
-  font-weight: 500;
-  color: #fff;
-  line-height: 1.6;
-  margin-bottom: var(--space-4);
-}
-
-.writing-cta-link {
-  color: var(--color-accent);
-  text-decoration: none;
-  border-bottom: 1px solid oklch(from var(--color-accent) l c h / 0.3);
-  transition: border-color 200ms var(--ease-out);
-}
-
-.writing-cta-link:hover {
-  border-color: var(--color-accent);
-}
-
-.writing-divider {
-  border: none;
-  border-top: 1px solid var(--color-border);
-  margin: var(--space-2) 0 var(--space-10);
-}
-
-.writing-section-sub {
-  font-size: var(--text-sm);
+.wrt-feed-aside {
+  font-weight: 400;
   color: var(--color-text-faint);
-  margin-top: calc(-1 * var(--space-4));
-  margin-bottom: var(--space-6);
+  text-transform: none;
+  letter-spacing: 0;
 }
 
 /* ========================================
